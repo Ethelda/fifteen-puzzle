@@ -1,4 +1,4 @@
-﻿Public Class Form1
+Public Class Form1
     Private buttonSize As Integer = 100
     Private empty As Point
     Private fieldOffset As Point
@@ -79,6 +79,7 @@
     End Sub
 
     Private Function IsSolved() As Boolean
+        Dim i As Integer
         For i = 0 To 14
             Dim btn As Button = GetButtonByPosition(New Point(i Mod 4, Math.Floor(i / 4)))
             If btn Is Nothing OrElse Not btn.Text.Equals(CStr(i + 1)) Then
@@ -103,7 +104,7 @@
         Dim position = GetButtonPosition(btn)
         Dim direction = GetDirectionToEmpty(position)
         My.Computer.Audio.Stop()
-        If direction <> Nothing Then
+        If direction IsNot Nothing Then
             MoveButton(btn, New Point(position.X + direction.X, position.Y + direction.Y))
             empty = position
             moveCount += 1
