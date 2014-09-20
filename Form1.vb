@@ -10,6 +10,9 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MenuStrip1.Items(0).Text = My.Resources.Resource1.Game
+        NewToolStripMenuItem.Text = My.Resources.Resource1.StartNew
+        ExitToolStripMenuItem.Text = My.Resources.Resource1.Quit
         Me.Icon = My.Resources.Resource1._15
         fieldOffset.Y = 25
         Shuffle()
@@ -23,7 +26,7 @@ Public Class Form1
         Next
         moveCount = 0
         done = False
-        SetWindowTitle("New")
+        SetWindowTitle(My.Resources.Resource1.StatusNew)
     End Sub
 
     Private Sub Swap(a As Point, b As Point)
@@ -54,7 +57,7 @@ Public Class Form1
     End Function
 
     Private Function GetButtonPosition(btn As Button) As Point
-        Return New Point(Math.Floor(btn.Left / 100), Math.Floor(btn.Top / 100))
+        Return New Point(Math.Floor(btn.Left / buttonSize), Math.Floor(btn.Top / buttonSize))
     End Function
 
     Private Function GetButtonByPosition(position As Point) As Button
@@ -90,11 +93,12 @@ Public Class Form1
     End Function
 
     Private Sub SetWindowTitle(message As String)
-        Text = String.Format("Fifteen puzzle - {0}", message)
+        Text = String.Format(My.Resources.Resource1.Window_Title, message)
     End Sub
+
     Private Sub Button_Click(sender As Object, e As EventArgs) Handles Button9.Click, Button8.Click, Button7.Click, Button6.Click, Button5.Click, Button4.Click, Button3.Click, Button2.Click, Button15.Click, Button14.Click, Button13.Click, Button12.Click, Button11.Click, Button10.Click, Button1.Click
         If done Then
-            Select Case MessageBox.Show(String.Format("This puzzle was solved in {0} moves. Do you want to try new one?", moveCount), "Start new", MessageBoxButtons.YesNo)
+            Select Case MessageBox.Show(String.Format(My.Resources.Resource1.Solved, moveCount), My.Resources.Resource1.StartNew, MessageBoxButtons.YesNo)
                 Case Windows.Forms.DialogResult.No
                     Shuffle()
             End Select
@@ -103,29 +107,29 @@ Public Class Form1
         Dim btn As Button = DirectCast(sender, Button)
         Dim position = GetButtonPosition(btn)
         Dim direction = GetDirectionToEmpty(position)
+        Dim sound As System.IO.UnmanagedMemoryStream
         My.Computer.Audio.Stop()
         If direction IsNot Nothing Then
             MoveButton(btn, New Point(position.X + direction.X, position.Y + direction.Y))
             empty = position
             moveCount += 1
-            My.Computer.Audio.Play(My.Resources.Resource1.tap, AudioPlayMode.Background)
-
+            sound = My.Resources.Resource1.tap
         Else
-            My.Computer.Audio.Play(My.Resources.Resource1.blocked, AudioPlayMode.Background)
-
+            sound = My.Resources.Resource1.blocked
         End If
-
-        SetWindowTitle(String.Format("Moves: {0}", moveCount))
+        My.Computer.Audio.Play(sound, AudioPlayMode.Background)
+        SetWindowTitle(String.Format(My.Resources.Resource1.Moves, moveCount))
         If IsSolved() Then
-            Dim message = String.Format("Victory in {0} click(s)!", moveCount)
+            Dim message = String.Format(My.Resources.Resource1.Victory, moveCount)
             SetWindowTitle(message)
-            MessageBox.Show(message, "Tadaa!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(message, My.Resources.Resource1.Tadaa, MessageBoxButtons.OK, MessageBoxIcon.Information)
             done = True
         End If
     End Sub
+
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         If moveCount > 0 Then
-            Dim result As Integer = MessageBox.Show("Do you want to give up and start new game?", "Start new", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
+            Dim result As Integer = MessageBox.Show(My.Resources.Resource1.GiveUp_StartNew, My.Resources.Resource1.StartNew, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
             If result = DialogResult.No Then
                 Return
             End If
@@ -136,16 +140,15 @@ Public Class Form1
     Private Sub Form1_FormClosing(sender As Object, e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Dim message As String
         If Not done And moveCount > 0 Then
-            message = "There are still puzzle to solve, are you sure want to quit?"
+            message = My.Resources.Resource1.Quit_Unsolved
         ElseIf Not done And moveCount = 0 Then
-            message = "Giving up before even trying to solve?"
+            message = My.Resources.Resource1.Quit_NotStarted
         Else
-            message = "Are you sure that this was enough puzzle solving for today?"
+            message = My.Resources.Resource1.Quit_EnoughToday
         End If
-        Select Case MessageBox.Show(message, "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Select Case MessageBox.Show(message, My.Resources.Resource1.Confirm, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             Case Windows.Forms.DialogResult.No
                 e.Cancel = True
         End Select
     End Sub
-
 End Class
