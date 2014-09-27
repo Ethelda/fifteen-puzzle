@@ -70,10 +70,10 @@ Namespace My.Resources
         Friend Shared ReadOnly Property background() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("background", resourceCulture)
-                Return CType(obj, System.Drawing.Bitmap)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
@@ -82,17 +82,27 @@ Namespace My.Resources
                 Return ResourceManager.GetStream("blocked", resourceCulture)
             End Get
         End Property
-
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property button0() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("button0", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend Shared ReadOnly Property button3() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("button3", resourceCulture)
-                Return CType(obj, System.Drawing.Bitmap)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Confirm.
         '''</summary>
@@ -101,7 +111,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Confirm", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Game.
         '''</summary>
@@ -110,7 +120,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Game", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Do you want to give up and start new game?.
         '''</summary>
@@ -119,17 +129,17 @@ Namespace My.Resources
                 Return ResourceManager.GetString("GiveUp_StartNew", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         '''</summary>
         Friend Shared ReadOnly Property Icon15() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("Icon15", resourceCulture)
-                Return CType(obj, System.Drawing.Icon)
+                Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Moves: {0}.
         '''</summary>

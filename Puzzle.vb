@@ -79,13 +79,28 @@ Public Class Puzzle
     Private Sub MoveButton(btn As Button, position As Point)
         btn.Left = buttonSize * position.X + fieldOffset.X
         btn.Top = buttonSize * position.Y + fieldOffset.Y
+        If IsButtonInHome(position) Then
+            btn.BackgroundImage = My.Resources.All.button0
+        Else
+            btn.BackgroundImage = My.Resources.All.button3
+        End If
     End Sub
+
+
+    Private Function IsButtonInHome(position As Point)
+        Dim btn As Button = GetButtonByPosition(position)
+        If btn Is Nothing OrElse Not btn.Text.Equals(CStr(position.X + (position.Y * 4) + 1)) Then
+            Return False
+        Else
+            Return True
+        End If
+
+    End Function
 
     Private Function IsSolved() As Boolean
         Dim i As Integer
         For i = 0 To 14
-            Dim btn As Button = GetButtonByPosition(New Point(i Mod 4, Math.Floor(i / 4)))
-            If btn Is Nothing OrElse Not btn.Text.Equals(CStr(i + 1)) Then
+            If Not IsButtonInHome(New Point(i Mod 4, Math.Floor(i / 4))) Then
                 Return False
             End If
         Next

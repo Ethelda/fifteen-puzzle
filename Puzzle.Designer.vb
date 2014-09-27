@@ -95,6 +95,7 @@ Partial Class Puzzle
         Me.Button4.CausesValidation = False
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button4.FlatAppearance.BorderSize = 20
         Me.Button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
         Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
@@ -112,9 +113,9 @@ Partial Class Puzzle
         '
         Me.Button5.BackColor = System.Drawing.Color.Transparent
         Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
-        Me.Button5.CausesValidation = False
         Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
         Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
@@ -126,6 +127,7 @@ Partial Class Puzzle
         Me.Button5.TabIndex = 4
         Me.Button5.TabStop = False
         Me.Button5.Text = "5"
+        Me.Button5.UseMnemonic = False
         Me.Button5.UseVisualStyleBackColor = False
         '
         'Button2
@@ -367,18 +369,18 @@ Partial Class Puzzle
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(95, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ContextMenuStrip1
@@ -386,7 +388,7 @@ Partial Class Puzzle
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
-        'Form1
+        'Puzzle
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.MintCream
@@ -413,7 +415,7 @@ Partial Class Puzzle
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.Name = "Form1"
+        Me.Name = "Puzzle"
         Me.Text = " "
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
