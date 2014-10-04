@@ -18,11 +18,18 @@ Public Class Puzzle
         Shuffle()
     End Sub
 
+    Private Iterator Function AllPoints() As IEnumerable(Of Point)
+        For i As Integer = 1 To 15
+            Yield New Point(i Mod 4, Math.Floor(i / 4))
+        Next
+    End Function
+
     Private Sub Shuffle()
-        Randomize()
-        Dim i As Integer
-        For i = 0 To 15
-            Swap(New Point(i Mod 4, Math.Floor(i / 4)), New Point(Math.Floor(3 * Rnd()), Math.Floor(3 * Rnd())))
+        For Each position As Point In AllPoints()
+            Swap(position, New Point(Math.Floor(3 * Rnd()), Math.Floor(3 * Rnd())))
+        Next
+        For Each position As Point In AllPoints()
+            SetButtonBackground(GetButtonByPosition(position), position)
         Next
         moveCount = 0
         done = False
@@ -36,14 +43,14 @@ Public Class Puzzle
         Dim btn1 As Button = GetButtonByPosition(a)
         Dim btn2 As Button = GetButtonByPosition(b)
         If btn1 Is Nothing Then
-            MoveButton(btn2, a)
+            TeleportButton(btn2, a)
             empty = b
         ElseIf btn2 Is Nothing Then
-            MoveButton(btn1, b)
+            TeleportButton(btn1, b)
             empty = a
         Else
-            MoveButton(btn1, b)
-            MoveButton(btn2, a)
+            TeleportButton(btn1, b)
+            TeleportButton(btn2, a)
         End If
     End Sub
 
@@ -76,25 +83,34 @@ Public Class Puzzle
         Return Nothing
     End Function
 
-    Private Sub MoveButton(btn As Button, position As Point)
+    Private Sub TeleportButton(btn As Button, position As Point)
         btn.Left = buttonSize * position.X + fieldOffset.X
         btn.Top = buttonSize * position.Y + fieldOffset.Y
+    End Sub
+
+    Private Sub MoveButton(btn As Button, position As Point)
+        TeleportButton(btn, position)
+        SetButtonBackground(btn, position)
+    End Sub
+
+    Private Sub SetButtonBackground(btn As Button, position As Point)
         If IsButtonInHome(position) Then
             btn.BackgroundImage = My.Resources.All.button0
-        Else
+        ElseIf btn IsNot Nothing Then
             btn.BackgroundImage = My.Resources.All.button3
         End If
     End Sub
 
-
     Private Function IsButtonInHome(position As Point)
-        Dim btn As Button = GetButtonByPosition(position)
-        If btn Is Nothing OrElse Not btn.Text.Equals(CStr(position.X + (position.Y * 4) + 1)) Then
+        Return IsButtonInHome(position, GetButtonByPosition(position))
+    End Function
+
+    Private Function IsButtonInHome(position As Point, button As Button)
+        If button Is Nothing OrElse Not button.Text.Equals(CStr(position.X + (position.Y * 4) + 1)) Then
             Return False
         Else
             Return True
         End If
-
     End Function
 
     Private Function IsSolved() As Boolean
