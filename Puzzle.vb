@@ -5,6 +5,7 @@ Public Class Puzzle
     Private moveCount As Integer
     Private done As Boolean
 
+
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Application.Exit()
     End Sub
