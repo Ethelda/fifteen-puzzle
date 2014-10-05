@@ -1,3 +1,5 @@
+Imports System.IO
+
 Public Class Puzzle
     Private tileSize As Integer = 100
     Private empty As Point
@@ -18,7 +20,7 @@ Public Class Puzzle
         Shuffle()
     End Sub
 
-    Private Function HomePosition(number As Integer) As Point
+    Private Function HomePosition(number As Integer)
         Return New Point(number Mod 4, Math.Floor(number / 4))
     End Function
 
@@ -59,8 +61,8 @@ Public Class Puzzle
         If a = b Then
             Return
         End If
-        Dim btn1 As Button = GetButtonByPosition(a)
-        Dim btn2 As Button = GetButtonByPosition(b)
+        Dim btn1 = GetButtonByPosition(a)
+        Dim btn2 = GetButtonByPosition(b)
         If btn1 Is Nothing Then
             TeleportButton(btn2, a)
             empty = b
@@ -82,7 +84,7 @@ Public Class Puzzle
         End If
     End Function
 
-    Private Function GetButtonPosition(btn As Button) As Point
+    Private Function GetButtonPosition(btn As Button)
         Return New Point(Math.Floor(btn.Left / tileSize), Math.Floor(btn.Top / tileSize))
     End Function
 
@@ -108,18 +110,18 @@ Public Class Puzzle
         End If
     End Sub
 
-    Private Function IsInHome(position As Point) As Boolean
+    Private Function IsInHome(position As Point)
         Return IsButtonInHome(position, GetButtonByPosition(position))
     End Function
 
-    Private Function IsButtonInHome(position As Point, button As Button) As Boolean
+    Private Function IsButtonInHome(position As Point, button As Button)
         Return button IsNot Nothing AndAlso button.Text.Equals(CStr(position.X + (position.Y * 4) + 1))
     End Function
 
-    Private Function IsSolved() As Boolean
+    Private Function IsSolved()
         Return Enumerable.Range(0, 14) _
-            .Select(Function(i As Integer) HomePosition(i)) _
-            .All(Function(position As Point) IsInHome(position))
+            .Select(Function(i) HomePosition(i)) _
+            .All(Function(position) IsInHome(position))
     End Function
 
     Private Sub SetWindowTitle(message As String)
@@ -134,10 +136,10 @@ Public Class Puzzle
             End Select
             Return
         End If
-        Dim btn As Button = DirectCast(sender, Button)
+        Dim btn = DirectCast(sender, Button)
         Dim position = GetButtonPosition(btn)
         Dim direction = GetDirectionToEmpty(position)
-        Dim sound As System.IO.UnmanagedMemoryStream
+        Dim sound As UnmanagedMemoryStream
         My.Computer.Audio.Stop()
         If direction IsNot Nothing Then
             MoveButton(btn, New Point(position.X + direction.X, position.Y + direction.Y))
@@ -159,7 +161,7 @@ Public Class Puzzle
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         If moveCount > 0 Then
-            Dim result As Integer = MessageBox.Show(My.Resources.All.GiveUp_StartNew, My.Resources.All.StartNew, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
+            Dim result = MessageBox.Show(My.Resources.All.GiveUp_StartNew, My.Resources.All.StartNew, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
             If result = DialogResult.No Then
                 Return
             End If
