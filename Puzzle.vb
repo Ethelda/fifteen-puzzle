@@ -47,31 +47,32 @@ Public Class Puzzle
     Private Sub Shuffle()
         TeleportToSolvedState()
         Positions.ForEach(Sub(position) Swap(position, New Point(Math.Floor(3 * Rnd()), Math.Floor(3 * Rnd()))))
-        Positions.ForEach(Sub(position) SetButtonBackground(GetButtonByPosition(position), position))
+        Positions.ForEach(Sub(position) SetTileBackground(GetTileByPosition(position), position))
         moveCount = 0
         done = False
         SetWindowTitle(My.Resources.All.StatusNew)
     End Sub
 
     Private Sub TeleportToSolvedState()
-        AllTiles.ToList().ForEach(Sub(tile) TeleportButton(tile, HomePosition(Int(tile.Text))))
+        AllTiles.ToList().ForEach(Sub(tile) TeleportTile(tile, HomePosition(Int(tile.Text))))
     End Sub
 
-    Private Sub Swap(a As Point, b As Point)
-        If a = b Then
+    Private Sub Swap(position1 As Point, position2 As Point)
+        If position1 = position2 Then
             Return
         End If
-        Dim btn1 = GetButtonByPosition(a)
-        Dim btn2 = GetButtonByPosition(b)
-        If btn1 Is Nothing Then
-            TeleportButton(btn2, a)
-            empty = b
-        ElseIf btn2 Is Nothing Then
-            TeleportButton(btn1, b)
-            empty = a
+        Dim tile1 = GetTileByPosition(position1)
+        Dim tile2 = GetTileByPosition(position2)
+
+        If tile1 Is Nothing Then
+            TeleportTile(tile2, position1)
+            empty = position2
+        ElseIf tile2 Is Nothing Then
+            TeleportTile(tile1, position2)
+            empty = position1
         Else
-            TeleportButton(btn1, b)
-            TeleportButton(btn2, a)
+            TeleportTile(tile1, position2)
+            TeleportTile(tile2, position1)
         End If
     End Sub
 
@@ -84,25 +85,25 @@ Public Class Puzzle
         End If
     End Function
 
-    Private Function GetButtonPosition(btn As Button)
+    Private Function GetTilePosition(btn As Button)
         Return New Point(Math.Floor(btn.Left / tileSize), Math.Floor(btn.Top / tileSize))
     End Function
 
-    Private Function GetButtonByPosition(position As Point) As Button
-        Return AllTiles.Where(Function(tile) GetButtonPosition(tile) = position).FirstOrDefault
+    Private Function GetTileByPosition(position As Point)
+        Return AllTiles.Where(Function(tile) GetTilePosition(tile) = position).FirstOrDefault
     End Function
 
-    Private Sub TeleportButton(btn As Button, position As Point)
+    Private Sub TeleportTile(btn As Button, position As Point)
         btn.Left = tileSize * position.X + fieldOffset.X
         btn.Top = tileSize * position.Y + fieldOffset.Y
     End Sub
 
-    Private Sub MoveButton(btn As Button, position As Point)
-        TeleportButton(btn, position)
-        SetButtonBackground(btn, position)
+    Private Sub MoveTile(btn As Button, position As Point)
+        TeleportTile(btn, position)
+        SetTileBackground(btn, position)
     End Sub
 
-    Private Sub SetButtonBackground(tile As Button, position As Point)
+    Private Sub SetTileBackground(tile As Button, position As Point)
         If IsInHome(position) Then
             tile.BackgroundImage = My.Resources.All.button0
         ElseIf tile IsNot Nothing Then
@@ -111,11 +112,11 @@ Public Class Puzzle
     End Sub
 
     Private Function IsInHome(position As Point)
-        Return IsButtonInHome(position, GetButtonByPosition(position))
+        Return IsTileInHome(position, GetTileByPosition(position))
     End Function
 
-    Private Function IsButtonInHome(position As Point, button As Button)
-        Return button IsNot Nothing AndAlso button.Text.Equals(CStr(position.X + (position.Y * 4) + 1))
+    Private Function IsTileInHome(position As Point, tile As Button)
+        Return tile IsNot Nothing AndAlso tile.Text.Equals(CStr(position.X + (position.Y * 4) + 1))
     End Function
 
     Private Function IsSolved()
@@ -137,12 +138,12 @@ Public Class Puzzle
             Return
         End If
         Dim btn = DirectCast(sender, Button)
-        Dim position = GetButtonPosition(btn)
+        Dim position = GetTilePosition(btn)
         Dim direction = GetDirectionToEmpty(position)
         Dim sound As UnmanagedMemoryStream
         My.Computer.Audio.Stop()
         If direction IsNot Nothing Then
-            MoveButton(btn, New Point(position.X + direction.X, position.Y + direction.Y))
+            MoveTile(btn, New Point(position.X + direction.X, position.Y + direction.Y))
             empty = position
             moveCount += 1
             sound = My.Resources.All.tap
