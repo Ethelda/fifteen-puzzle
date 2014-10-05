@@ -1,10 +1,9 @@
 Public Class Puzzle
-    Private buttonSize As Integer = 100
+    Private tileSize As Integer = 100
     Private empty As Point
     Private fieldOffset As Point
     Private moveCount As Integer
     Private done As Boolean
-
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Application.Exit()
@@ -19,22 +18,41 @@ Public Class Puzzle
         Shuffle()
     End Sub
 
-    Private Iterator Function AllPoints() As IEnumerable(Of Point)
-        For i As Integer = 1 To 15
-            Yield New Point(i Mod 4, Math.Floor(i / 4))
-        Next
+    Private Function HomePosition(number As Integer) As Point
+        Return New Point(number Mod 4, Math.Floor(number / 4))
     End Function
 
+    Private Positions As List(Of Point) =
+        Enumerable.Range(0, 15) _
+        .Select(Function(i) New Point(i Mod 4, Math.Floor(i / 4))) _
+        .ToList()
+
+    ReadOnly Iterator Property AllTiles As IEnumerable(Of Button)
+        Get
+            For Each item As Control In Controls
+                If Not TypeOf item Is Button Then
+                    Continue For
+                End If
+                Dim tile = DirectCast(item, Button)
+                If (tile.Width <> tileSize Or tile.Height <> tileSize) Then
+                    Continue For
+                End If
+                Yield tile
+            Next
+        End Get
+    End Property
+
     Private Sub Shuffle()
-        For Each position As Point In AllPoints()
-            Swap(position, New Point(Math.Floor(3 * Rnd()), Math.Floor(3 * Rnd())))
-        Next
-        For Each position As Point In AllPoints()
-            SetButtonBackground(GetButtonByPosition(position), position)
-        Next
+        TeleportToSolvedState()
+        Positions.ForEach(Sub(position) Swap(position, New Point(Math.Floor(3 * Rnd()), Math.Floor(3 * Rnd()))))
+        Positions.ForEach(Sub(position) SetButtonBackground(GetButtonByPosition(position), position))
         moveCount = 0
         done = False
         SetWindowTitle(My.Resources.All.StatusNew)
+    End Sub
+
+    Private Sub TeleportToSolvedState()
+        AllTiles.ToList().ForEach(Sub(tile) TeleportButton(tile, HomePosition(Int(tile.Text))))
     End Sub
 
     Private Sub Swap(a As Point, b As Point)
@@ -65,28 +83,16 @@ Public Class Puzzle
     End Function
 
     Private Function GetButtonPosition(btn As Button) As Point
-        Return New Point(Math.Floor(btn.Left / buttonSize), Math.Floor(btn.Top / buttonSize))
+        Return New Point(Math.Floor(btn.Left / tileSize), Math.Floor(btn.Top / tileSize))
     End Function
 
     Private Function GetButtonByPosition(position As Point) As Button
-        For Each item As Control In Controls
-            If Not TypeOf item Is Button Then
-                Continue For
-            End If
-            Dim btn As Button = DirectCast(item, Button)
-            If (btn.Width <> buttonSize Or btn.Height <> buttonSize) Then
-                Continue For
-            End If
-            If GetButtonPosition(btn) = position Then
-                Return btn
-            End If
-        Next
-        Return Nothing
+        Return AllTiles.Where(Function(tile) GetButtonPosition(tile) = position).FirstOrDefault
     End Function
 
     Private Sub TeleportButton(btn As Button, position As Point)
-        btn.Left = buttonSize * position.X + fieldOffset.X
-        btn.Top = buttonSize * position.Y + fieldOffset.Y
+        btn.Left = tileSize * position.X + fieldOffset.X
+        btn.Top = tileSize * position.Y + fieldOffset.Y
     End Sub
 
     Private Sub MoveButton(btn As Button, position As Point)
@@ -94,41 +100,33 @@ Public Class Puzzle
         SetButtonBackground(btn, position)
     End Sub
 
-    Private Sub SetButtonBackground(btn As Button, position As Point)
-        If IsButtonInHome(position) Then
-            btn.BackgroundImage = My.Resources.All.button0
-        ElseIf btn IsNot Nothing Then
-            btn.BackgroundImage = My.Resources.All.button3
+    Private Sub SetButtonBackground(tile As Button, position As Point)
+        If IsInHome(position) Then
+            tile.BackgroundImage = My.Resources.All.button0
+        ElseIf tile IsNot Nothing Then
+            tile.BackgroundImage = My.Resources.All.button3
         End If
     End Sub
 
-    Private Function IsButtonInHome(position As Point)
+    Private Function IsInHome(position As Point) As Boolean
         Return IsButtonInHome(position, GetButtonByPosition(position))
     End Function
 
-    Private Function IsButtonInHome(position As Point, button As Button)
-        If button Is Nothing OrElse Not button.Text.Equals(CStr(position.X + (position.Y * 4) + 1)) Then
-            Return False
-        Else
-            Return True
-        End If
+    Private Function IsButtonInHome(position As Point, button As Button) As Boolean
+        Return button IsNot Nothing AndAlso button.Text.Equals(CStr(position.X + (position.Y * 4) + 1))
     End Function
 
     Private Function IsSolved() As Boolean
-        Dim i As Integer
-        For i = 0 To 14
-            If Not IsButtonInHome(New Point(i Mod 4, Math.Floor(i / 4))) Then
-                Return False
-            End If
-        Next
-        Return True
+        Return Enumerable.Range(0, 14) _
+            .Select(Function(i As Integer) HomePosition(i)) _
+            .All(Function(position As Point) IsInHome(position))
     End Function
 
     Private Sub SetWindowTitle(message As String)
         Text = String.Format(My.Resources.All.Window_Title, message)
     End Sub
 
-    Private Sub Button_Click(sender As Object, e As EventArgs) Handles Button9.Click, Button8.Click, Button7.Click, Button6.Click, Button5.Click, Button4.Click, Button3.Click, Button2.Click, Button15.Click, Button14.Click, Button13.Click, Button12.Click, Button11.Click, Button10.Click, Button1.Click
+    Private Sub Button_Click(sender As Object, e As EventArgs) Handles Tile1.Click, Tile2.Click, Tile3.Click, Tile4.Click, Tile5.Click, Tile6.Click, Tile7.Click, Tile8.Click, Tile9.Click, Tile10.Click, Tile11.Click, Tile12.Click, Tile13.Click, Tile14.Click, Tile15.Click
         If done Then
             Select Case MessageBox.Show(String.Format(My.Resources.All.Solved, moveCount), My.Resources.All.StartNew, MessageBoxButtons.YesNo)
                 Case Windows.Forms.DialogResult.No
@@ -169,7 +167,7 @@ Public Class Puzzle
         Shuffle()
     End Sub
 
-    Private Sub Form1_FormClosing(sender As Object, e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Dim message As String
         If Not done And moveCount > 0 Then
             message = My.Resources.All.Quit_Unsolved

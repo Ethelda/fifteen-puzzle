@@ -24,331 +24,331 @@ Partial Class Puzzle
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Puzzle))
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Tile1 = New System.Windows.Forms.Button()
+        Me.Tile2 = New System.Windows.Forms.Button()
+        Me.Tile3 = New System.Windows.Forms.Button()
+        Me.Tile4 = New System.Windows.Forms.Button()
+        Me.Tile5 = New System.Windows.Forms.Button()
+        Me.Tile6 = New System.Windows.Forms.Button()
+        Me.Tile7 = New System.Windows.Forms.Button()
+        Me.Tile8 = New System.Windows.Forms.Button()
+        Me.Tile9 = New System.Windows.Forms.Button()
+        Me.Tile10 = New System.Windows.Forms.Button()
+        Me.Tile11 = New System.Windows.Forms.Button()
+        Me.Tile12 = New System.Windows.Forms.Button()
+        Me.Tile13 = New System.Windows.Forms.Button()
+        Me.Tile14 = New System.Windows.Forms.Button()
+        Me.Tile15 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.GameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.MenuStrip1.SuspendLayout()
-        Me.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout
+        Me.SuspendLayout
         '
-        'Button1
+        'Tile15
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.CausesValidation = False
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button1.Location = New System.Drawing.Point(300, 325)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 100)
-        Me.Button1.TabIndex = 0
-        Me.Button1.TabStop = False
-        Me.Button1.Text = "1"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Tile15.BackColor = System.Drawing.Color.Transparent
+        Me.Tile15.BackgroundImage = CType(resources.GetObject("Tile15.BackgroundImage"),System.Drawing.Image)
+        Me.Tile15.CausesValidation = false
+        Me.Tile15.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile15.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile15.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile15.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile15.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile15.Location = New System.Drawing.Point(202, 326)
+        Me.Tile15.Name = "Tile15"
+        Me.Tile15.Size = New System.Drawing.Size(100, 100)
+        Me.Tile15.TabIndex = 0
+        Me.Tile15.TabStop = false
+        Me.Tile15.Text = "15"
+        Me.Tile15.UseVisualStyleBackColor = false
         '
-        'Button3
+        'Tile3
         '
-        Me.Button3.BackColor = System.Drawing.Color.Transparent
-        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
-        Me.Button3.CausesValidation = False
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button3.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button3.Location = New System.Drawing.Point(300, 25)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(100, 100)
-        Me.Button3.TabIndex = 2
-        Me.Button3.TabStop = False
-        Me.Button3.Text = "3"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.Tile3.BackColor = System.Drawing.Color.Transparent
+        Me.Tile3.BackgroundImage = CType(resources.GetObject("Tile3.BackgroundImage"),System.Drawing.Image)
+        Me.Tile3.CausesValidation = false
+        Me.Tile3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile3.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile3.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile3.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile3.Location = New System.Drawing.Point(202, 27)
+        Me.Tile3.Name = "Tile3"
+        Me.Tile3.Size = New System.Drawing.Size(100, 100)
+        Me.Tile3.TabIndex = 2
+        Me.Tile3.TabStop = false
+        Me.Tile3.Text = "3"
+        Me.Tile3.UseVisualStyleBackColor = false
         '
-        'Button4
+        'Tile2
         '
-        Me.Button4.BackColor = System.Drawing.Color.Transparent
-        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
-        Me.Button4.CausesValidation = False
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button4.FlatAppearance.BorderSize = 20
-        Me.Button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button4.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button4.Location = New System.Drawing.Point(200, 25)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(100, 100)
-        Me.Button4.TabIndex = 3
-        Me.Button4.TabStop = False
-        Me.Button4.Text = "4"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Tile2.BackColor = System.Drawing.Color.Transparent
+        Me.Tile2.BackgroundImage = CType(resources.GetObject("Tile2.BackgroundImage"),System.Drawing.Image)
+        Me.Tile2.CausesValidation = false
+        Me.Tile2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile2.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile2.FlatAppearance.BorderSize = 20
+        Me.Tile2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile2.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile2.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile2.Location = New System.Drawing.Point(102, 27)
+        Me.Tile2.Name = "Tile2"
+        Me.Tile2.Size = New System.Drawing.Size(100, 100)
+        Me.Tile2.TabIndex = 3
+        Me.Tile2.TabStop = false
+        Me.Tile2.Text = "2"
+        Me.Tile2.UseVisualStyleBackColor = false
         '
-        'Button5
+        'Tile1
         '
-        Me.Button5.BackColor = System.Drawing.Color.Transparent
-        Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
-        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button5.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button5.Location = New System.Drawing.Point(100, 25)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(100, 100)
-        Me.Button5.TabIndex = 4
-        Me.Button5.TabStop = False
-        Me.Button5.Text = "5"
-        Me.Button5.UseMnemonic = False
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.Tile1.BackColor = System.Drawing.Color.Transparent
+        Me.Tile1.BackgroundImage = CType(resources.GetObject("Tile1.BackgroundImage"),System.Drawing.Image)
+        Me.Tile1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile1.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile1.FlatAppearance.BorderSize = 0
+        Me.Tile1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile1.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile1.Location = New System.Drawing.Point(2, 27)
+        Me.Tile1.Name = "Tile1"
+        Me.Tile1.Size = New System.Drawing.Size(100, 100)
+        Me.Tile1.TabIndex = 4
+        Me.Tile1.TabStop = false
+        Me.Tile1.Text = "1"
+        Me.Tile1.UseMnemonic = false
+        Me.Tile1.UseVisualStyleBackColor = false
         '
-        'Button2
+        'Tile5
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
-        Me.Button2.CausesValidation = False
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button2.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button2.Location = New System.Drawing.Point(100, 125)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 100)
-        Me.Button2.TabIndex = 8
-        Me.Button2.TabStop = False
-        Me.Button2.Text = "2"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Tile5.BackColor = System.Drawing.Color.Transparent
+        Me.Tile5.BackgroundImage = CType(resources.GetObject("Tile5.BackgroundImage"),System.Drawing.Image)
+        Me.Tile5.CausesValidation = false
+        Me.Tile5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile5.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile5.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile5.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile5.Location = New System.Drawing.Point(2, 127)
+        Me.Tile5.Name = "Tile5"
+        Me.Tile5.Size = New System.Drawing.Size(100, 100)
+        Me.Tile5.TabIndex = 8
+        Me.Tile5.TabStop = false
+        Me.Tile5.Text = "5"
+        Me.Tile5.UseVisualStyleBackColor = false
         '
-        'Button6
+        'Tile6
         '
-        Me.Button6.BackColor = System.Drawing.Color.Transparent
-        Me.Button6.BackgroundImage = CType(resources.GetObject("Button6.BackgroundImage"), System.Drawing.Image)
-        Me.Button6.CausesValidation = False
-        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button6.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button6.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button6.Location = New System.Drawing.Point(200, 125)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(100, 100)
-        Me.Button6.TabIndex = 7
-        Me.Button6.TabStop = False
-        Me.Button6.Text = "6"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.Tile6.BackColor = System.Drawing.Color.Transparent
+        Me.Tile6.BackgroundImage = CType(resources.GetObject("Tile6.BackgroundImage"),System.Drawing.Image)
+        Me.Tile6.CausesValidation = false
+        Me.Tile6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile6.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile6.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile6.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile6.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile6.Location = New System.Drawing.Point(102, 127)
+        Me.Tile6.Name = "Tile6"
+        Me.Tile6.Size = New System.Drawing.Size(100, 100)
+        Me.Tile6.TabIndex = 7
+        Me.Tile6.TabStop = false
+        Me.Tile6.Text = "6"
+        Me.Tile6.UseVisualStyleBackColor = false
         '
-        'Button7
+        'Tile7
         '
-        Me.Button7.BackColor = System.Drawing.Color.Transparent
-        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
-        Me.Button7.CausesValidation = False
-        Me.Button7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button7.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button7.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button7.Location = New System.Drawing.Point(300, 125)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(100, 100)
-        Me.Button7.TabIndex = 6
-        Me.Button7.TabStop = False
-        Me.Button7.Text = "7"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.Tile7.BackColor = System.Drawing.Color.Transparent
+        Me.Tile7.BackgroundImage = CType(resources.GetObject("Tile7.BackgroundImage"),System.Drawing.Image)
+        Me.Tile7.CausesValidation = false
+        Me.Tile7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile7.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile7.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile7.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile7.Location = New System.Drawing.Point(202, 127)
+        Me.Tile7.Name = "Tile7"
+        Me.Tile7.Size = New System.Drawing.Size(100, 100)
+        Me.Tile7.TabIndex = 6
+        Me.Tile7.TabStop = false
+        Me.Tile7.Text = "7"
+        Me.Tile7.UseVisualStyleBackColor = false
         '
-        'Button8
+        'Tile4
         '
-        Me.Button8.BackColor = System.Drawing.Color.Transparent
-        Me.Button8.BackgroundImage = CType(resources.GetObject("Button8.BackgroundImage"), System.Drawing.Image)
-        Me.Button8.CausesValidation = False
-        Me.Button8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button8.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button8.Location = New System.Drawing.Point(0, 125)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(100, 100)
-        Me.Button8.TabIndex = 5
-        Me.Button8.TabStop = False
-        Me.Button8.Text = "8"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.Tile4.BackColor = System.Drawing.Color.Transparent
+        Me.Tile4.BackgroundImage = CType(resources.GetObject("Tile4.BackgroundImage"),System.Drawing.Image)
+        Me.Tile4.CausesValidation = false
+        Me.Tile4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile4.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile4.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile4.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile4.Location = New System.Drawing.Point(302, 27)
+        Me.Tile4.Name = "Tile4"
+        Me.Tile4.Size = New System.Drawing.Size(100, 100)
+        Me.Tile4.TabIndex = 5
+        Me.Tile4.TabStop = false
+        Me.Tile4.Text = "4"
+        Me.Tile4.UseVisualStyleBackColor = false
         '
-        'Button9
+        'Tile9
         '
-        Me.Button9.BackColor = System.Drawing.Color.Transparent
-        Me.Button9.BackgroundImage = CType(resources.GetObject("Button9.BackgroundImage"), System.Drawing.Image)
-        Me.Button9.CausesValidation = False
-        Me.Button9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button9.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button9.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button9.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button9.Location = New System.Drawing.Point(100, 225)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(100, 100)
-        Me.Button9.TabIndex = 12
-        Me.Button9.TabStop = False
-        Me.Button9.Text = "9"
-        Me.Button9.UseVisualStyleBackColor = False
+        Me.Tile9.BackColor = System.Drawing.Color.Transparent
+        Me.Tile9.BackgroundImage = CType(resources.GetObject("Tile9.BackgroundImage"),System.Drawing.Image)
+        Me.Tile9.CausesValidation = false
+        Me.Tile9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile9.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile9.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile9.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile9.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile9.Location = New System.Drawing.Point(2, 226)
+        Me.Tile9.Name = "Tile9"
+        Me.Tile9.Size = New System.Drawing.Size(100, 100)
+        Me.Tile9.TabIndex = 12
+        Me.Tile9.TabStop = false
+        Me.Tile9.Text = "9"
+        Me.Tile9.UseVisualStyleBackColor = false
         '
-        'Button10
+        'Tile10
         '
-        Me.Button10.BackColor = System.Drawing.Color.Transparent
-        Me.Button10.BackgroundImage = CType(resources.GetObject("Button10.BackgroundImage"), System.Drawing.Image)
-        Me.Button10.CausesValidation = False
-        Me.Button10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button10.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button10.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button10.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button10.Location = New System.Drawing.Point(200, 225)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(100, 100)
-        Me.Button10.TabIndex = 11
-        Me.Button10.TabStop = False
-        Me.Button10.Text = "10"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.Tile10.BackColor = System.Drawing.Color.Transparent
+        Me.Tile10.BackgroundImage = CType(resources.GetObject("Tile10.BackgroundImage"),System.Drawing.Image)
+        Me.Tile10.CausesValidation = false
+        Me.Tile10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile10.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile10.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile10.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile10.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile10.Location = New System.Drawing.Point(102, 226)
+        Me.Tile10.Name = "Tile10"
+        Me.Tile10.Size = New System.Drawing.Size(100, 100)
+        Me.Tile10.TabIndex = 11
+        Me.Tile10.TabStop = false
+        Me.Tile10.Text = "10"
+        Me.Tile10.UseVisualStyleBackColor = false
         '
-        'Button11
+        'Tile11
         '
-        Me.Button11.BackColor = System.Drawing.Color.Transparent
-        Me.Button11.BackgroundImage = CType(resources.GetObject("Button11.BackgroundImage"), System.Drawing.Image)
-        Me.Button11.CausesValidation = False
-        Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button11.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button11.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button11.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button11.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button11.Location = New System.Drawing.Point(300, 225)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(100, 100)
-        Me.Button11.TabIndex = 10
-        Me.Button11.TabStop = False
-        Me.Button11.Text = "11"
-        Me.Button11.UseVisualStyleBackColor = False
+        Me.Tile11.BackColor = System.Drawing.Color.Transparent
+        Me.Tile11.BackgroundImage = CType(resources.GetObject("Tile11.BackgroundImage"),System.Drawing.Image)
+        Me.Tile11.CausesValidation = false
+        Me.Tile11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile11.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile11.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile11.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile11.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile11.Location = New System.Drawing.Point(202, 226)
+        Me.Tile11.Name = "Tile11"
+        Me.Tile11.Size = New System.Drawing.Size(100, 100)
+        Me.Tile11.TabIndex = 10
+        Me.Tile11.TabStop = false
+        Me.Tile11.Text = "11"
+        Me.Tile11.UseVisualStyleBackColor = false
         '
-        'Button12
+        'Tile8
         '
-        Me.Button12.BackColor = System.Drawing.Color.Transparent
-        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
-        Me.Button12.CausesValidation = False
-        Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button12.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button12.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button12.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button12.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button12.Location = New System.Drawing.Point(0, 225)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(100, 100)
-        Me.Button12.TabIndex = 9
-        Me.Button12.TabStop = False
-        Me.Button12.Text = "12"
-        Me.Button12.UseVisualStyleBackColor = False
+        Me.Tile8.BackColor = System.Drawing.Color.Transparent
+        Me.Tile8.BackgroundImage = CType(resources.GetObject("Tile8.BackgroundImage"),System.Drawing.Image)
+        Me.Tile8.CausesValidation = false
+        Me.Tile8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile8.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile8.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile8.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile8.Location = New System.Drawing.Point(302, 127)
+        Me.Tile8.Name = "Tile8"
+        Me.Tile8.Size = New System.Drawing.Size(100, 100)
+        Me.Tile8.TabIndex = 9
+        Me.Tile8.TabStop = false
+        Me.Tile8.Text = "8"
+        Me.Tile8.UseVisualStyleBackColor = false
         '
-        'Button13
+        'Tile13
         '
-        Me.Button13.BackColor = System.Drawing.Color.Transparent
-        Me.Button13.BackgroundImage = CType(resources.GetObject("Button13.BackgroundImage"), System.Drawing.Image)
-        Me.Button13.CausesValidation = False
-        Me.Button13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button13.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button13.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button13.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button13.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button13.Location = New System.Drawing.Point(100, 325)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(100, 100)
-        Me.Button13.TabIndex = 16
-        Me.Button13.TabStop = False
-        Me.Button13.Text = "13"
-        Me.Button13.UseVisualStyleBackColor = False
+        Me.Tile13.BackColor = System.Drawing.Color.Transparent
+        Me.Tile13.BackgroundImage = CType(resources.GetObject("Tile13.BackgroundImage"),System.Drawing.Image)
+        Me.Tile13.CausesValidation = false
+        Me.Tile13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile13.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile13.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile13.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile13.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile13.Location = New System.Drawing.Point(2, 326)
+        Me.Tile13.Name = "Tile13"
+        Me.Tile13.Size = New System.Drawing.Size(100, 100)
+        Me.Tile13.TabIndex = 16
+        Me.Tile13.TabStop = false
+        Me.Tile13.Text = "13"
+        Me.Tile13.UseVisualStyleBackColor = false
         '
-        'Button14
+        'Tile14
         '
-        Me.Button14.BackColor = System.Drawing.Color.Transparent
-        Me.Button14.BackgroundImage = CType(resources.GetObject("Button14.BackgroundImage"), System.Drawing.Image)
-        Me.Button14.CausesValidation = False
-        Me.Button14.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button14.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button14.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button14.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button14.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button14.Location = New System.Drawing.Point(200, 325)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(100, 100)
-        Me.Button14.TabIndex = 15
-        Me.Button14.TabStop = False
-        Me.Button14.Text = "14"
-        Me.Button14.UseVisualStyleBackColor = False
+        Me.Tile14.BackColor = System.Drawing.Color.Transparent
+        Me.Tile14.BackgroundImage = CType(resources.GetObject("Tile14.BackgroundImage"),System.Drawing.Image)
+        Me.Tile14.CausesValidation = false
+        Me.Tile14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile14.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile14.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile14.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile14.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile14.Location = New System.Drawing.Point(102, 326)
+        Me.Tile14.Name = "Tile14"
+        Me.Tile14.Size = New System.Drawing.Size(100, 100)
+        Me.Tile14.TabIndex = 15
+        Me.Tile14.TabStop = false
+        Me.Tile14.Text = "14"
+        Me.Tile14.UseVisualStyleBackColor = false
         '
-        'Button15
+        'Tile12
         '
-        Me.Button15.BackColor = System.Drawing.Color.Transparent
-        Me.Button15.BackgroundImage = CType(resources.GetObject("Button15.BackgroundImage"), System.Drawing.Image)
-        Me.Button15.CausesValidation = False
-        Me.Button15.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button15.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button15.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button15.Font = New System.Drawing.Font("Monaco", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Button15.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Button15.Location = New System.Drawing.Point(0, 325)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(100, 100)
-        Me.Button15.TabIndex = 13
-        Me.Button15.TabStop = False
-        Me.Button15.Text = "15"
-        Me.Button15.UseVisualStyleBackColor = False
+        Me.Tile12.BackColor = System.Drawing.Color.Transparent
+        Me.Tile12.BackgroundImage = CType(resources.GetObject("Tile12.BackgroundImage"),System.Drawing.Image)
+        Me.Tile12.CausesValidation = false
+        Me.Tile12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Tile12.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Tile12.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Tile12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Tile12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Tile12.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186,Byte))
+        Me.Tile12.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Tile12.Location = New System.Drawing.Point(302, 226)
+        Me.Tile12.Name = "Tile12"
+        Me.Tile12.Size = New System.Drawing.Size(100, 100)
+        Me.Tile12.TabIndex = 13
+        Me.Tile12.TabStop = false
+        Me.Tile12.Text = "12"
+        Me.Tile12.UseVisualStyleBackColor = false
         '
         'MenuStrip1
         '
@@ -393,51 +393,51 @@ Partial Class Puzzle
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.MintCream
         Me.BackgroundImage = Global.FifteenPuzzle.My.Resources.All.background
-        Me.CausesValidation = False
+        Me.CausesValidation = false
         Me.ClientSize = New System.Drawing.Size(401, 427)
-        Me.Controls.Add(Me.Button13)
-        Me.Controls.Add(Me.Button14)
-        Me.Controls.Add(Me.Button15)
-        Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button10)
-        Me.Controls.Add(Me.Button11)
-        Me.Controls.Add(Me.Button12)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Tile13)
+        Me.Controls.Add(Me.Tile14)
+        Me.Controls.Add(Me.Tile12)
+        Me.Controls.Add(Me.Tile9)
+        Me.Controls.Add(Me.Tile10)
+        Me.Controls.Add(Me.Tile11)
+        Me.Controls.Add(Me.Tile8)
+        Me.Controls.Add(Me.Tile5)
+        Me.Controls.Add(Me.Tile6)
+        Me.Controls.Add(Me.Tile7)
+        Me.Controls.Add(Me.Tile4)
+        Me.Controls.Add(Me.Tile1)
+        Me.Controls.Add(Me.Tile2)
+        Me.Controls.Add(Me.Tile3)
+        Me.Controls.Add(Me.Tile15)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.DoubleBuffered = True
+        Me.DoubleBuffered = true
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MaximizeBox = False
+        Me.MaximizeBox = false
         Me.Name = "Puzzle"
         Me.Text = " "
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(false)
+        Me.MenuStrip1.PerformLayout
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
-    Friend WithEvents Button10 As System.Windows.Forms.Button
-    Friend WithEvents Button11 As System.Windows.Forms.Button
-    Friend WithEvents Button12 As System.Windows.Forms.Button
-    Friend WithEvents Button13 As System.Windows.Forms.Button
-    Friend WithEvents Button14 As System.Windows.Forms.Button
-    Friend WithEvents Button15 As System.Windows.Forms.Button
+End Sub
+    Friend WithEvents Tile15 As System.Windows.Forms.Button
+    Friend WithEvents Tile3 As System.Windows.Forms.Button
+    Friend WithEvents Tile2 As System.Windows.Forms.Button
+    Friend WithEvents Tile1 As System.Windows.Forms.Button
+    Friend WithEvents Tile5 As System.Windows.Forms.Button
+    Friend WithEvents Tile6 As System.Windows.Forms.Button
+    Friend WithEvents Tile7 As System.Windows.Forms.Button
+    Friend WithEvents Tile4 As System.Windows.Forms.Button
+    Friend WithEvents Tile9 As System.Windows.Forms.Button
+    Friend WithEvents Tile10 As System.Windows.Forms.Button
+    Friend WithEvents Tile11 As System.Windows.Forms.Button
+    Friend WithEvents Tile8 As System.Windows.Forms.Button
+    Friend WithEvents Tile13 As System.Windows.Forms.Button
+    Friend WithEvents Tile14 As System.Windows.Forms.Button
+    Friend WithEvents Tile12 As System.Windows.Forms.Button
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents GameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
