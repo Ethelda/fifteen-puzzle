@@ -20,6 +20,27 @@ Public Class Puzzle
         Shuffle()
     End Sub
 
+    Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
+        Dim x = 0
+        Dim y = 0
+        Select Case keyData
+            Case Keys.Up
+                y = 1
+            Case Keys.Down
+                y = -1
+            Case Keys.Left
+                x = 1
+            Case Keys.Right
+                x = -1
+        End Select
+
+        If (x = 0 And y = 0) Or (x <> 0 And y <> 0) Then
+            Return MyBase.ProcessCmdKey(msg, keyData)
+        End If
+        DoGameMovement(GetTileByPosition(New Point(empty.X + x, empty.Y + y)))
+        Return True
+    End Function
+
     Private Function HomePosition(number As Integer)
         Return New Point(number Mod 4, Math.Floor(number / 4))
     End Function
@@ -130,6 +151,15 @@ Public Class Puzzle
     End Sub
 
     Private Sub Button_Click(sender As Object, e As EventArgs) Handles Tile1.Click, Tile2.Click, Tile3.Click, Tile4.Click, Tile5.Click, Tile6.Click, Tile7.Click, Tile8.Click, Tile9.Click, Tile10.Click, Tile11.Click, Tile12.Click, Tile13.Click, Tile14.Click, Tile15.Click
+        DoGameMovement(DirectCast(sender, Button))
+    End Sub
+
+
+    Private Sub DoGameMovement(tile As Button)
+        If tile Is Nothing Then
+            Return
+        End If
+
         If done Then
             Select Case MessageBox.Show(String.Format(My.Resources.All.Solved, moveCount), My.Resources.All.StartNew, MessageBoxButtons.YesNo)
                 Case Windows.Forms.DialogResult.No
@@ -137,13 +167,14 @@ Public Class Puzzle
             End Select
             Return
         End If
-        Dim btn = DirectCast(sender, Button)
-        Dim position = GetTilePosition(btn)
+
+        Dim position = GetTilePosition(tile)
         Dim direction = GetDirectionToEmpty(position)
+
         Dim sound As UnmanagedMemoryStream
         My.Computer.Audio.Stop()
         If direction IsNot Nothing Then
-            MoveTile(btn, New Point(position.X + direction.X, position.Y + direction.Y))
+            MoveTile(tile, New Point(position.X + direction.X, position.Y + direction.Y))
             empty = position
             moveCount += 1
             sound = My.Resources.All.tap
@@ -158,6 +189,7 @@ Public Class Puzzle
             MessageBox.Show(message, My.Resources.All.Tadaa, MessageBoxButtons.OK, MessageBoxIcon.Information)
             done = True
         End If
+
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
