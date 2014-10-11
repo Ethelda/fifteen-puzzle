@@ -216,4 +216,8 @@ Public Class Puzzle
                 e.Cancel = True
         End Select
     End Sub
+
+    Private Sub OptionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionsToolStripMenuItem.Click
+        Options.ShowDialog(Me)
+    End Sub
 End Class
